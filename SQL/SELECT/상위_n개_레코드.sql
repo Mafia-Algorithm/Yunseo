@@ -1,0 +1,12 @@
+SELECT name
+FROM animal_ins
+ORDER BY datetime
+LIMIT 1
+
+# 최소값을 서브쿼리로 조회하는 방법
+SELECT NAME
+FROM ANIMAL_INS
+WHERE DATETIME = (
+  SELECT MIN(DATETIME)
+  FROM ANIMAL_INS
+);
